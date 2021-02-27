@@ -1,5 +1,5 @@
 ---
-### The CodeLab
+### _CodeLab_
 ---
 
-This is where I'll keep any tips and tricks or tutorial code.
+Python code scripts for interesting / useful tasks
