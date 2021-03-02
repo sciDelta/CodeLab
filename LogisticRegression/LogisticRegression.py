@@ -31,13 +31,11 @@ print('conf_m:', conf_m, sep='\n', end='\n\n')
 print('report:', report, sep='\n')
 
 """ Step 6: Plot Output """
-fig, ax = plt.subplots(1,2, sharey = False, figsize = (10,6))
+fig, ax = plt.subplots(1,2, figsize = (10,6))
 ax[0].plot(x, y_pred)
 ax[0].scatter(x, y)
-sns.heatmap(conf_m, annot = True, cbar = False).invert_yaxis()
-
-ax[1].set_yticks([False])
-ax[1].set_xticks([False])
-
 ax[0].set_title('Logistic Regression Plot')
+
+sns.heatmap(conf_m, annot = True, xticklabels = ['False', 'True'], 
+            yticklabels = ['False', 'True'], cbar = False).invert_yaxis()
 ax[1].set_title('Logistic Regression Confusion Matrix');
